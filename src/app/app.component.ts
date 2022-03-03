@@ -34,9 +34,14 @@ this.loadF()
   }
 
   add(){
-    if(this.UserSelect.id === 0){
+    if(this.UserSelect.name === ' ' || this.UserSelect.email === ''){
+      alert('debe de colocar un nombre');
+    }
+    else if(this.UserSelect.id === 0 && this.UserSelect.name != '' && this.UserSelect.name != undefined){
       this.UserSelect.id = this.arrayUsers.length + 1 ;
       this.arrayUsers.push(this.UserSelect)
+    }else{
+      alert('favor completar un nombre')
     }
 
     this.UserSelect = new Users();
@@ -45,6 +50,18 @@ this.loadF()
     console.log(user)
     this.UserSelect = user;
 
+  }
+
+  listenDelete(e:any){
+    console.log(e)
+    if(confirm('estas seguro de querer eliminar a ' + e.name + '?')){
+
+      this.arrayUsers =  this.arrayUsers.filter( u => u.id != e.id)
+    }
+  }
+  listenEdit(e:any){
+    console.log(e)
+    this.UserSelect = e;
   }
   deletee(user:Users){
     console.log(user)
