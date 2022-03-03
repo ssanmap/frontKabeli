@@ -34,14 +34,14 @@ this.loadF()
   }
 
   add(){
-    if(this.UserSelect.name === ' ' || this.UserSelect.email === ''){
-      alert('debe de colocar un nombre');
-    }
-    else if(this.UserSelect.id === 0 && this.UserSelect.name != '' && this.UserSelect.name != undefined){
+    // if(this.UserSelect.name === ' ' || this.UserSelect.email === '' || this.UserSelect.name == undefined){
+    //   alert('debe de colocar un nombre');
+    // }
+     if(this.UserSelect.id === 0 && this.UserSelect.name != undefined ){
       this.UserSelect.id = this.arrayUsers.length + 1 ;
       this.arrayUsers.push(this.UserSelect)
-    }else{
-      alert('favor completar un nombre')
+    }else if (this.UserSelect.name === undefined){
+      alert('Debe colocar al menos un nombre')
     }
 
     this.UserSelect = new Users();
