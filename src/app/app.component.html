@@ -6,7 +6,9 @@
      <ul class="list-group">
        <li *ngFor="let user of arrayUsers" class="list-group-item"
         [class.active]="user === UserSelect">
+
           {{user.name}}  -- {{user.email}}
+
 
           <a (click)="edit(user)" class="edit cambio" ><i class="material-icons" title="Edit">&#xE254;</i></a>
 
