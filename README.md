@@ -1,6 +1,6 @@
-# Iniciación a Angular. Ejemplos.
+# Test para Iniciar el proyecto Angular.
 
-Para probar los ejemplos de este repositorio, teclea los siguientes comandos:
+Para probar este ejemplo , teclea los siguientes comandos:
 
 1. Clona este repositorio en local:
 
